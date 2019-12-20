@@ -5,5 +5,5 @@ mainTextArea.innerHTML = 'jsから書きました';
 
 // onclick
 const save = () => {
-  alert('save()');
+  alert('text1の値 : ' + text1.value);
 }
