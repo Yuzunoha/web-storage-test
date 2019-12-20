@@ -1,12 +1,20 @@
 const mainTextArea = document.getElementById('main-text-area');
 const text1 = document.getElementById('text1');
 
-mainTextArea.innerHTML = 'jsから書きました';
+// webstorageの値をhtmlに表示する
+const update = () => {
+  const key = 'text1';
+  const value = localStorage.getItem(key);
+  mainTextArea.innerHTML = 'webstorageの値 : ' + key + ' => ' + value;
+}
 
 // onclick
 const save = () => {
-  alert('text1の値 : ' + text1.value);
+  localStorage.setItem('text1', text1.value);
+  update();
 }
+
+update();
 
 /*
 // 次の3つは等価
